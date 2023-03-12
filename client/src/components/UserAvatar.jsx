@@ -8,7 +8,7 @@ const UserAvatar = ({ image, size ="60px"}) => {
             alt="user"
             width={size}
             height={size}
-            src={`http://localhost:30007/assets/${image}`}
+            src={`http://localhost:3007/assets/${image}`}
             />
         </Box>
     )
