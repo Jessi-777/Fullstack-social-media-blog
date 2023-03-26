@@ -9,8 +9,6 @@ import Dropzone from "react-dropzone";
 import FlexDecor from "components/FlexDecor";
 import UserAvatar from "components/UserAvatar";
 import FeaturewRapper from "components/FeaturewRapper";
-// import { MyPostFeature } from 'scenes/featureCards/MyPostFeature';
-
 
 
 const MyPostFeature = ({ picturePath }) => {

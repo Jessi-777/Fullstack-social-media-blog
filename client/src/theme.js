@@ -55,7 +55,7 @@ export const colorTokens = {
               },
             }
           : {
-              // palette values for light mode#a2aac7
+              // palette values for light mode
               primary: {
                 dark: colorTokens.primary[700],
                 main: colorTokens.primary[500],

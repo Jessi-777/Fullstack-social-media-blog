@@ -4,6 +4,9 @@ import { useMediaQuery, Box } from "@mui/material";
 import { useSelector } from "react-redux";
 import UserCardLeft from "scenes/featureCards/UserCardLeft";
 import MyPostFeature from "scenes/featureCards/MyPostFeature";
+import PostsFeature from "scenes/featureCards/PostsFeature";
+import AdvertisingFeature from "scenes/featureCards/AdvertisingFeature";
+import FriendListFeature from "scenes/featureCards/FriendListFeature";
 
 const HomePage = () => {
   const isNonMobileScreens = useMediaQuery('(min-width:1000px)');
@@ -23,12 +26,19 @@ const HomePage = () => {
           <UserCardLeft userId={_id} picturePath={picturePath} />
         </Box>
         <Box
-          flexBasis={isNonMobileScreens ? '43%' : undefined}
+          flexBasis={isNonMobileScreens ? '42%' : undefined}
           margintop={isNonMobileScreens ? undefined : '2rem'}
         >
           <MyPostFeature picturePath={ picturePath } />
+          <PostsFeature userId={ _id } />
         </Box>
-        {isNonMobileScreens && <Box flexBasis="26%"></Box>}
+        {isNonMobileScreens && (
+        <Box flexBasis="26%">
+          <AdvertisingFeature />
+          <Box m="2rem 0" />
+          <FriendListFeature userId={_id} />
+        </Box>
+        )}
       </Box>
     </Box>
   );
